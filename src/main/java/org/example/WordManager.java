@@ -16,16 +16,16 @@ public class WordManager {
 
         System.out.println("***Word Master***\n"
                 + "************\n"
-                + "1. Show all word\n"
-                + "2. Show word order by level\n"
-                + "3. Search word\n"
-                + "4. Add word\n"
-                + "5. Update word\n"
-                + "6. Delete word\n"
-                + "7. Save file\n"
-                + "0. Exit\n"
+                + "1. 모든 단어 보기\n"
+                + "2. 수준별 단어 보기\n"
+                + "3. 단어 검색\n"
+                + "4. 단어 추가\n"
+                + "5. 단어 수정\n"
+                + "6. 단어 삭제\n"
+                + "7. 파일 저장\n"
+                + "0. 나가기\n"
                 + "************\n"
-                + " ==> select Menu : "
+                + " ==> 원하는 메뉴는? : "
         );
         return s.nextInt();
     }
