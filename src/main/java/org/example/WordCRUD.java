@@ -83,7 +83,7 @@ public class WordCRUD implements ICRUD {
         String meaning = s.nextLine();
         Word word = list.get(idlist.get(id-1));
         word.setMeaning(meaning);
-        System.out.print("단어가 수정되었습니다. \n");
+        System.out.print("단어가 수정되었습니다. ");
     }
 
     public void deleteItem() {
@@ -98,37 +98,11 @@ public class WordCRUD implements ICRUD {
 
         if(ans.equalsIgnoreCase("y")){
             list.remove((int)idlist.get(id-1));
-            System.out.print("단어가 삭제되었습니다. \n");
+            System.out.print("단어가 삭제되었습니다. ");
         } else{
-            System.out.print("취소되었습니다. \n");
+            System.out.print("취소되었습니다. ");
         }
     }
-    public void searchItem() {
-        System.out.print("=> 단어 검색 : ");
-        String keyword = s.next();
-        ArrayList<Integer> idlist = this.listAll(keyword);
-    }
-
-    public void levelItem() {
-        System.out.print("=> 난이도 검색 : ");
-        String keyword = s.next();
-        ArrayList<Integer> idlist = new ArrayList<>();
-
-        int j=0;
-        System.out.println("------------------------");
-        for(int i=0; i < list.size(); i++) {
-            int level = list.get(i).getLevel();
-            if(level != Integer.parseInt(keyword)) continue;
-            System.out.print((j+1)+" ");
-            System.out.println(list.get(i).toString());
-            idlist.add(i);
-            j++;
-        }
-        System.out.println("------------------------");
-
-
-    }
-
     public void loadFile(){
         try{
             BufferedReader br = new BufferedReader(new FileReader(fname));

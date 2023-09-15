@@ -34,10 +34,7 @@ public class WordManager {
         wordCRUD.loadFile();
         while(true) {
             int menu = selectMenu();
-            if(menu == 0) {
-                System.out.print("다음에 만나요~!!");
-                break;
-            }
+            if(menu == 0)break;
             if(menu == 4) {
                 wordCRUD.addItem();
             }else if(menu == 1) {
@@ -48,10 +45,6 @@ public class WordManager {
                 wordCRUD.deleteItem();
             }else if(menu == 7){
                 wordCRUD.saveFile();
-            }else if(menu == 3){
-                wordCRUD.searchItem();
-            }else if(menu == 2){
-                wordCRUD.levelItem();
             }
         }
     }
